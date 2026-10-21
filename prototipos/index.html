@@ -1,0 +1,937 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth overflow-x-hidden">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consultoria do Coelho | Coelho Dias — Personal Trainer &amp; Fisiculturismo</title>
+  <meta name="description" content="Disciplina é o que te leva mais longe. Acompanhamento de treino online e presencial, bioimpedância, treino e dieta periodizados sem terrorismo alimentar.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Coelho Dias — Personal Trainer">
+  <meta name="theme-color" content="#DC2626">
+  <link rel="canonical" href="https://consultoriadocoelho.com.br/">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Open Graph / WhatsApp / Instagram -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Consultoria do Coelho">
+  <meta property="og:title" content="Consultoria do Coelho | Coelho Dias — Personal Trainer &amp; Fisiculturismo">
+  <meta property="og:description" content="Seu Objetivo + Meu Plano = Resultados Reais. Treino e dieta periodizados individualmente, sem terrorismo alimentar e com 50% OFF a partir do 2º mês no Lote Fundador.">
+  <meta property="og:image" content="imagens/preview-01-hero.png">
+  <meta property="og:url" content="https://consultoriadocoelho.com.br/">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Consultoria do Coelho | Coelho Dias — Personal Trainer">
+  <meta name="twitter:description" content="Disciplina é o que te leva mais longe. Treino e dieta periodizados sem terrorismo alimentar.">
+  <meta name="twitter:image" content="imagens/preview-01-hero.png">
+
+  <!-- Structured Data (Schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HealthAndBeautyBusiness",
+    "name": "Consultoria do Coelho — Coelho Dias Personal Trainer",
+    "description": "Acompanhamento de treino online e presencial, bioimpedância e análise física, treino e dieta periodizados individualmente sem terrorismo alimentar.",
+    "image": "imagens/coelho-character-hero.png",
+    "priceRange": "R$ 100 - R$ 300",
+    "founder": {
+      "@type": "Person",
+      "name": "Coelho Dias",
+      "jobTitle": "Personal Trainer & Consultor Esportivo"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Plano Normal",
+        "price": "100.00",
+        "priceCurrency": "BRL",
+        "description": "1º mês R$ 200, demais meses R$ 100/mês no Lote Fundador (50% OFF). Atualização e feedback semanais."
+      },
+      {
+        "@type": "Offer",
+        "name": "Plano Plus (Mais Escolhido)",
+        "price": "125.00",
+        "priceCurrency": "BRL",
+        "description": "1º mês R$ 250, demais meses R$ 125/mês no Lote Fundador (50% OFF). Feedback diário e ajuste de postura, treino e contagem diária."
+      },
+      {
+        "@type": "Offer",
+        "name": "Plano Ultra Aluno",
+        "price": "150.00",
+        "priceCurrency": "BRL",
+        "description": "1º mês R$ 300, demais meses R$ 150/mês no Lote Fundador. Inclui todos os benefícios anteriores + 2 aulas presenciais de personal por semana."
+      }
+    ]
+  }
+  </script>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Bebas Neue, Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            obsidian: {
+              950: '#060608',
+              900: '#09090B',
+              800: '#121216',
+              700: '#1C1C22',
+            },
+            crimson: {
+              500: '#EF4444',
+              600: '#DC2626',
+              700: '#B91C1C',
+              900: '#7F1D1D',
+            },
+            steel: {
+              400: '#A1A1AA',
+              700: '#3F3F46',
+              800: '#27272A',
+            },
+            founder: '#34D399'
+          },
+          fontFamily: {
+            display: ['"Bebas Neue"', 'Impact', 'sans-serif'],
+            sans: ['"Inter"', 'system-ui', '-apple-system', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      --obsidian-950: #060608;
+      --obsidian-900: #09090B;
+      --obsidian-800: #121216;
+      --obsidian-700: #1C1C22;
+      --crimson-500: #EF4444;
+      --crimson-600: #DC2626;
+      --crimson-700: #B91C1C;
+      --crimson-900: #7F1D1D;
+      --steel-400: #A1A1AA;
+      --steel-700: #3F3F46;
+      --steel-800: #27272A;
+      --semantic-white: #F4F4F5;
+      --founder-discount: #34D399;
+    }
+
+    html, body {
+      background-color: #060608;
+      color: #F4F4F5;
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+      max-width: 100vw;
+    }
+
+    /* Textura de Hachura Mangá (Inspirada no traço de Kentaro Miura / Berserk) */
+    .bg-manga-hatch {
+      background-image:
+        repeating-linear-gradient(
+          -45deg,
+          rgba(255, 255, 255, 0.018) 0px,
+          rgba(255, 255, 255, 0.018) 1px,
+          transparent 1px,
+          transparent 7px
+        ),
+        repeating-linear-gradient(
+          45deg,
+          rgba(220, 38, 38, 0.015) 0px,
+          rgba(220, 38, 38, 0.015) 1px,
+          transparent 1px,
+          transparent 11px
+        );
+    }
+
+    /* Efeito Eclipse Carmesim */
+    .eclipse-glow {
+      background: radial-gradient(circle at 50% 35%, rgba(220, 38, 38, 0.22) 0%, rgba(185, 28, 28, 0.06) 45%, rgba(6, 6, 8, 0) 75%);
+    }
+
+    .eclipse-card-glow {
+      background-image: radial-gradient(circle at 50% 0%, rgba(220, 38, 38, 0.22) 0%, rgba(18, 18, 22, 0) 70%);
+    }
+
+    /* Recorte Chanfrado Estilo Armadura / Dragonslayer */
+    .armor-card {
+      clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 18px 100%, 0 calc(100% - 18px));
+    }
+
+    .armor-btn {
+      clip-path: polygon(10px 0, 100% 0, calc(100% - 10px) 100%, 0 100%);
+    }
+
+    .slash-divider {
+      height: 2px;
+      background: linear-gradient(90deg, transparent 0%, #DC2626 50%, transparent 100%);
+    }
+  </style>
+</head>
+<body class="bg-obsidian-950 text-zinc-100 antialiased selection:bg-crimson-600 selection:text-white">
+
+  <!-- SEÇÃO 0: TOP BANNER DE ESCASSEZ (OFERTA DE LANÇAMENTO / LOTE FUNDADOR) -->
+  <div class="bg-gradient-to-r from-obsidian-900 via-crimson-900/90 to-obsidian-900 border-b border-crimson-600/40 py-2.5 px-3 sm:px-4 text-center relative z-50">
+    <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-xs sm:text-sm font-medium">
+      <span class="px-2 py-0.5 bg-crimson-600 text-white font-mono font-bold uppercase tracking-wider text-[11px] rounded">Lote Fundador</span>
+      <span class="text-zinc-100">Promoção Exclusiva para os Primeiros Alunos: <strong>50% DE DESCONTO</strong> em todas as mensalidades a partir do 2º mês!</span>
+      <a href="#planos" class="underline text-crimson-500 hover:text-white font-semibold ml-1 transition inline-flex items-center min-h-[28px]">Ver tabela com desconto &rarr;</a>
+    </div>
+  </div>
+
+  <!-- NAVBAR FIXA -->
+  <header class="sticky top-0 z-40 bg-obsidian-950/95 backdrop-blur-md border-b border-steel-800/80">
+    <div class="max-w-6xl mx-auto px-3 sm:px-6 h-16 sm:h-20 flex items-center justify-between gap-2">
+      <a href="#" class="flex items-center gap-2.5 sm:gap-3 group shrink-0" aria-label="Consultoria do Coelho - Início">
+        <!-- Emblema Vetorial: Coroa Vermelha + Marca do Struggler -->
+        <div class="w-10 h-10 rounded bg-obsidian-800 border border-crimson-600/60 flex items-center justify-center shadow-[0_0_15px_rgba(220,38,38,0.25)] group-hover:border-crimson-500 transition shrink-0">
+          <svg class="w-6 h-6 text-crimson-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+            <path d="M12 2L15.5 9L21 4L19 16H5L3 4L8.5 9L12 2Z" stroke-linejoin="miter"/>
+            <path d="M12 9V22M8 19H16" stroke-linecap="square"/>
+          </svg>
+        </div>
+        <div>
+          <span class="font-display text-xl sm:text-2xl tracking-wider text-white block leading-none">CONSULTORIA DO <span class="text-crimson-600">COELHO</span></span>
+          <span class="font-mono text-[9px] sm:text-[10px] tracking-widest uppercase text-steel-400 block mt-0.5">Coelho Dias &bull; Personal Trainer</span>
+        </div>
+      </a>
+
+      <!-- Navegação Desktop -->
+      <nav class="hidden md:flex items-center gap-6 lg:gap-7 text-sm font-medium text-zinc-300" aria-label="Navegação Principal">
+        <a href="#metodo" class="hover:text-crimson-500 transition py-2">Os 5 Pilares</a>
+        <a href="#filosofia" class="hover:text-crimson-500 transition py-2">Filosofia</a>
+        <a href="#planos" class="hover:text-crimson-500 transition py-2">Planos Mensais</a>
+        <a href="#simulador" class="hover:text-crimson-500 transition py-2">Montar Meu Plano</a>
+        <a href="#faq" class="hover:text-crimson-500 transition py-2">Dúvidas</a>
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <a href="#planos" class="armor-btn bg-crimson-600 hover:bg-crimson-500 text-white font-display tracking-wider text-sm sm:text-lg px-3.5 sm:px-5 py-2.5 min-h-[44px] inline-flex items-center justify-center transition shadow-[0_0_20px_rgba(220,38,38,0.4)] whitespace-nowrap">
+          GARANTIR 50% OFF
+        </a>
+
+        <!-- Botão Menu Mobile (Touch Target >= 44px) -->
+        <button id="mobile-menu-btn" type="button" onclick="toggleMobileMenu()" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menu de navegação" class="md:hidden w-11 h-11 min-h-[44px] min-w-[44px] bg-obsidian-800 border border-steel-700 hover:border-crimson-500 text-zinc-200 flex items-center justify-center transition">
+          <svg id="menu-icon-open" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="square" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg id="menu-icon-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="square" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Gaveta de Navegação Mobile -->
+    <nav id="mobile-menu" class="hidden md:hidden bg-obsidian-900 border-b border-steel-800 px-4 py-3" aria-label="Menu Mobile">
+      <div class="flex flex-col space-y-1 text-sm font-mono uppercase tracking-wider">
+        <a href="#metodo" onclick="closeMobileMenu()" class="min-h-[44px] flex items-center px-3 text-zinc-200 hover:text-crimson-500 hover:bg-obsidian-800 transition">01 // Os 5 Pilares</a>
+        <a href="#filosofia" onclick="closeMobileMenu()" class="min-h-[44px] flex items-center px-3 text-zinc-200 hover:text-crimson-500 hover:bg-obsidian-800 transition">02 // Filosofia da Forja</a>
+        <a href="#planos" onclick="closeMobileMenu()" class="min-h-[44px] flex items-center px-3 text-zinc-200 hover:text-crimson-500 hover:bg-obsidian-800 transition">03 // Planos Mensais (50% OFF)</a>
+        <a href="#simulador" onclick="closeMobileMenu()" class="min-h-[44px] flex items-center px-3 text-zinc-200 hover:text-crimson-500 hover:bg-obsidian-800 transition">04 // Montar Meu Plano</a>
+        <a href="#faq" onclick="closeMobileMenu()" class="min-h-[44px] flex items-center px-3 text-zinc-200 hover:text-crimson-500 hover:bg-obsidian-800 transition">05 // Perguntas Frequentes</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- SEÇÃO 1: HERO SECTION IMERSIVA (DARK MANGA + FISICULTURISMO) -->
+    <section class="relative min-h-[86vh] flex items-center bg-manga-hatch eclipse-glow border-b border-steel-800 overflow-hidden py-10 sm:py-14 lg:py-16">
+      <!-- Marca d'água monumental de fundo -->
+      <div class="pointer-events-none select-none absolute -right-10 top-10 font-display text-[15rem] leading-none text-white/[0.02] tracking-tighter hidden lg:block" aria-hidden="true">
+        DISCIPLINA
+      </div>
+
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center relative z-10">
+        <!-- Coluna Esquerda: Copy e Conversão -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-obsidian-800 border border-crimson-600/50 text-crimson-500 text-xs font-mono uppercase tracking-widest">
+            <span class="w-2 h-2 rounded-full bg-crimson-600 animate-pulse"></span>
+            Acompanhamento Online &amp; Presencial
+          </div>
+
+          <h1 class="font-display text-5xl sm:text-7xl lg:text-[5.25rem] leading-[0.92] tracking-wide uppercase text-white">
+            DISCIPLINA É O QUE TE LEVA <span class="text-crimson-600 underline decoration-crimson-700/60 decoration-4 underline-offset-8">MAIS LONGE.</span>
+          </h1>
+
+          <p class="font-mono text-xs sm:text-sm uppercase tracking-widest text-zinc-200 bg-obsidian-800/90 border-l-4 border-crimson-600 py-3 px-4 max-w-xl">
+            SEU OBJETIVO <span class="text-crimson-500 font-bold">+</span> MEU PLANO <span class="text-crimson-500 font-bold">=</span> RESULTADOS REAIS
+          </p>
+
+          <p class="text-zinc-300 text-base sm:text-lg leading-relaxed max-w-xl">
+            Chega de treinar no escuro com fichas genéricas ou sofrer com dietas impossíveis de manter. Tenha um protocolo de <strong>treino e estratégia alimentar periodizados individualmente</strong>, com bioimpedância, análise física e sem terrorismo alimentar.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4 pt-2">
+            <a href="#planos" class="armor-btn bg-crimson-600 hover:bg-crimson-500 text-white font-display text-2xl tracking-wider px-8 py-4 min-h-[52px] inline-flex items-center justify-center text-center shadow-[0_0_30px_rgba(220,38,38,0.45)] transition">
+              ESCOLHER MEU PLANO AGORA
+            </a>
+            <a href="#simulador" class="armor-btn bg-obsidian-800 hover:bg-obsidian-700 text-zinc-200 border border-steel-700 hover:border-crimson-500 font-display text-2xl tracking-wider px-7 py-4 min-h-[52px] inline-flex items-center justify-center text-center transition">
+              SIMULAR MEU PROTOCOLO
+            </a>
+          </div>
+
+          <!-- 3 Selos Rápidos da Base do Flyer Original -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 pt-6 border-t border-steel-800/80 max-w-lg">
+            <div class="flex items-center gap-2.5 bg-obsidian-900/60 sm:bg-transparent p-2 sm:p-0 border border-steel-800/60 sm:border-0">
+              <div class="w-8 h-8 shrink-0 rounded bg-crimson-600/15 border border-crimson-600/40 flex items-center justify-center text-crimson-500 font-mono font-bold text-xs">01</div>
+              <span class="text-xs font-mono uppercase tracking-wider text-zinc-300 leading-tight">Treino<br class="hidden sm:inline"/> Inteligente</span>
+            </div>
+            <div class="flex items-center gap-2.5 bg-obsidian-900/60 sm:bg-transparent p-2 sm:p-0 border border-steel-800/60 sm:border-0">
+              <div class="w-8 h-8 shrink-0 rounded bg-crimson-600/15 border border-crimson-600/40 flex items-center justify-center text-crimson-500 font-mono font-bold text-xs">02</div>
+              <span class="text-xs font-mono uppercase tracking-wider text-zinc-300 leading-tight">Saúde em<br class="hidden sm:inline"/> Equilíbrio</span>
+            </div>
+            <div class="flex items-center gap-2.5 bg-obsidian-900/60 sm:bg-transparent p-2 sm:p-0 border border-steel-800/60 sm:border-0">
+              <div class="w-8 h-8 shrink-0 rounded bg-crimson-600/15 border border-crimson-600/40 flex items-center justify-center text-crimson-500 font-mono font-bold text-xs">03</div>
+              <span class="text-xs font-mono uppercase tracking-wider text-zinc-300 leading-tight">Resultados<br class="hidden sm:inline"/> Reais</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coluna Direita: Ilustração Oficial Isolada do Coelho Dias -->
+        <div class="lg:col-span-5 relative flex justify-center">
+          <div class="relative w-full max-w-md aspect-[4/5] border border-steel-800 bg-obsidian-900 overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.9)] armor-card">
+            <img
+              src="../imagens/coelho-character-hero.png"
+              onerror="if(this.src.indexOf('../imagens/')===-1){this.src='../imagens/coelho-character-hero.png';}"
+              alt="Coelho Dias — Personal Trainer e Consultoria do Coelho"
+              width="600"
+              height="750"
+              fetchpriority="high"
+              class="w-full h-full object-cover object-top opacity-95"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-obsidian-950 via-obsidian-950/20 to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4 p-4 bg-obsidian-950/90 backdrop-blur border border-crimson-600/40">
+              <div class="flex items-center justify-between gap-2">
+                <div>
+                  <p class="font-display text-2xl tracking-wider text-white leading-none">COELHO DIAS</p>
+                  <p class="font-mono text-[11px] text-crimson-500 uppercase tracking-widest mt-0.5">Personal Trainer &amp; Consultoria</p>
+                </div>
+                <span class="px-2.5 py-1 bg-crimson-600/20 border border-crimson-600 text-crimson-400 font-mono text-[10px] uppercase shrink-0">Vagas Abertas</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 2: OS 5 PILARES DA CONSULTORIA (#metodo) -->
+    <section id="metodo" class="scroll-mt-20 py-20 bg-obsidian-900 border-b border-steel-800 relative">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+          <div>
+            <span class="font-mono text-xs uppercase tracking-widest text-crimson-500 block mb-2">// Metodologia de Forja</span>
+            <h2 class="font-display text-4xl sm:text-5xl tracking-wide uppercase text-white">
+              OS 5 PILARES DA <span class="text-crimson-600">CONSULTORIA DO COELHO</span>
+            </h2>
+          </div>
+          <p class="text-steel-400 text-sm max-w-md leading-relaxed">
+            Cada variável da sua rotina é calculada para que você evolua semana após semana, sem adivinhação e sem dietas restritivas que geram efeito sanfona.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Pilar 01 -->
+          <article class="armor-card bg-obsidian-800 border border-steel-800 hover:border-crimson-600/60 p-6 sm:p-7 transition group">
+            <div class="w-12 h-12 bg-crimson-600/10 border border-crimson-600/40 flex items-center justify-center text-crimson-500 mb-5 group-hover:bg-crimson-600 group-hover:text-white transition">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 6.5l11 11M21 21l-1-1M3 3l1 1M18 22l4-4M2 6l4-4M3 10l7-7M14 21l7-7"/></svg>
+            </div>
+            <span class="font-mono text-[11px] text-crimson-500 uppercase tracking-widest">Pilar 01</span>
+            <h3 class="font-display text-2xl tracking-wide text-white mt-1 mb-2">ACOMPANHAMENTO DE TREINO ONLINE</h3>
+            <p class="text-steel-400 text-sm leading-relaxed">
+              Suporte próximo para ajuste de cargas, análise de vídeos de execução e manutenção da sua constância blindada em qualquer academia.
+            </p>
+          </article>
+
+          <!-- Pilar 02 -->
+          <article class="armor-card bg-obsidian-800 border border-steel-800 hover:border-crimson-600/60 p-6 sm:p-7 transition group">
+            <div class="w-12 h-12 bg-crimson-600/10 border border-crimson-600/40 flex items-center justify-center text-crimson-500 mb-5 group-hover:bg-crimson-600 group-hover:text-white transition">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <span class="font-mono text-[11px] text-crimson-500 uppercase tracking-widest">Pilar 02</span>
+            <h3 class="font-display text-2xl tracking-wide text-white mt-1 mb-2">BIOIMPEDÂNCIA E ANÁLISE FÍSICA</h3>
+            <p class="text-steel-400 text-sm leading-relaxed">
+              Avaliação detalhada da sua composição corporal, proporções, simetria muscular e postura para atacar exatamente os pontos que transformarão seu físico.
+            </p>
+          </article>
+
+          <!-- Pilar 03 -->
+          <article class="armor-card bg-obsidian-800 border border-steel-800 hover:border-crimson-600/60 p-6 sm:p-7 transition group">
+            <div class="w-12 h-12 bg-crimson-600/10 border border-crimson-600/40 flex items-center justify-center text-crimson-500 mb-5 group-hover:bg-crimson-600 group-hover:text-white transition">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </div>
+            <span class="font-mono text-[11px] text-crimson-500 uppercase tracking-widest">Pilar 03</span>
+            <h3 class="font-display text-2xl tracking-wide text-white mt-1 mb-2">TREINO PERIODIZADO E PADRONIZADO INDIVIDUAL</h3>
+            <p class="text-steel-400 text-sm leading-relaxed">
+              Zero fichas genéricas de gaveta. Volume, intensidade, cadência e seleção biomecânica estruturados exclusivamente para sua rotina e individualidade.
+            </p>
+          </article>
+
+          <!-- Pilar 04 -->
+          <article class="armor-card bg-obsidian-800 border border-steel-800 hover:border-crimson-600/60 p-6 sm:p-7 transition group">
+            <div class="w-12 h-12 bg-crimson-600/10 border border-crimson-600/40 flex items-center justify-center text-crimson-500 mb-5 group-hover:bg-crimson-600 group-hover:text-white transition">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+            </div>
+            <span class="font-mono text-[11px] text-crimson-500 uppercase tracking-widest">Pilar 04</span>
+            <h3 class="font-display text-2xl tracking-wide text-white mt-1 mb-2">DIETA PERIODIZADA DE ACORDO COM TREINO E NECESSIDADES</h3>
+            <p class="text-steel-400 text-sm leading-relaxed">
+              Estratégia alimentar sincronizada com a demanda energética dos seus dias de treino, respeitando sua rotina, preferências e objetivos reais.
+            </p>
+          </article>
+
+          <!-- Pilar 05 (Card Duplo em Destaque) -->
+          <article class="armor-card bg-gradient-to-br from-obsidian-800 to-crimson-900/30 border border-crimson-600/60 p-6 sm:p-7 md:col-span-2 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+                <span class="px-2.5 py-1 bg-crimson-600 text-white font-mono text-[11px] uppercase tracking-wider font-bold">Diferencial Exclusivo</span>
+                <span class="font-mono text-xs text-crimson-400 uppercase tracking-widest">Pilar 05</span>
+              </div>
+              <h3 class="font-display text-3xl sm:text-4xl tracking-wide text-white mb-2">
+                SEM TERRORISMO ALIMENTAR: <span class="text-crimson-500">VAI PODER COMER DOCINHO TODO DIA E AINDA EMAGRECER!</span>
+              </h3>
+              <p class="text-zinc-300 text-sm sm:text-base leading-relaxed">
+                O segredo do físico estético, seco e duradouro não é cortar tudo o que você gosta, mas dominar o balanço energético e a distribuição de macronutrientes. Com a estratégia certa, você encaixa seu doce diário na meta sem culpa, mantendo adesão total e resultados consistentes.
+              </p>
+            </div>
+            <div class="mt-5 pt-4 border-t border-crimson-600/30 flex flex-wrap items-center justify-between gap-3 text-xs font-mono text-zinc-300">
+              <span class="text-founder font-bold">&#10003; ADESÃO SUSTENTÁVEL A LONGO PRAZO</span>
+              <span class="text-crimson-400">CONTROLE DE MACROS SEM SOFRIMENTO</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 3: MANIFESTO "A MENTALIDADE DA FORJA" (#filosofia) -->
+    <section id="filosofia" class="scroll-mt-20 py-20 bg-obsidian-950 bg-manga-hatch border-b border-steel-800 relative overflow-hidden">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center space-y-6">
+        <div class="inline-flex items-center gap-2 text-crimson-500 font-mono text-xs uppercase tracking-widest">
+          <span>&#9670;</span> A Mentalidade da Forja &bull; The Struggler Spirit <span>&#9670;</span>
+        </div>
+
+        <h2 class="sr-only">Filosofia de Disciplina e Evolução Física</h2>
+
+        <blockquote class="font-display text-4xl sm:text-6xl tracking-wide uppercase text-white leading-none max-w-3xl mx-auto">
+          "NÃO IMPORTA O TAMANHO DO PESO, MAS A <span class="text-crimson-600">DISCIPLINA</span> DE QUEM RECUSA PARAR DE LUTAR."
+        </blockquote>
+
+        <p class="text-steel-400 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+          No fisiculturismo e na vida, resultados extraordinários não vêm de atalhos mágicos. Vêm da repetição consciente, da postura corrigida no detalhe e de um protocolo forjado sob medida para a sua batalha diária.
+        </p>
+
+        <!-- Barra Visual de Evolução na Forja -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 max-w-4xl mx-auto text-left">
+          <div class="armor-card bg-obsidian-900 border border-steel-800 p-5">
+            <span class="font-mono text-[11px] text-steel-400 uppercase tracking-widest block">Fase 01 // Ponto de Partida</span>
+            <p class="font-display text-2xl text-white tracking-wider mt-1">INICIANTE &amp; RECOMEÇO</p>
+            <p class="text-xs text-steel-400 mt-1 leading-relaxed">Correção postural, adaptação articular, domínio da execução e organização alimentar sem radicalismo.</p>
+          </div>
+          <div class="armor-card bg-obsidian-900 border border-crimson-600/40 p-5">
+            <span class="font-mono text-[11px] text-crimson-500 uppercase tracking-widest block">Fase 02 // Quebra de Platô</span>
+            <p class="font-display text-2xl text-white tracking-wider mt-1">INTERMEDIÁRIO PERIODIZADO</p>
+            <p class="text-xs text-steel-400 mt-1 leading-relaxed">Progressão inteligente de cargas, controle de volume semanal e sincronia exata entre dieta e treino.</p>
+          </div>
+          <div class="armor-card bg-obsidian-900 border border-crimson-600 p-5 shadow-[0_0_25px_rgba(220,38,38,0.15)]">
+            <span class="font-mono text-[11px] text-founder uppercase tracking-widest block">Fase 03 // Alta Performance</span>
+            <p class="font-display text-2xl text-crimson-500 tracking-wider mt-1">SHAPE FORJADO &amp; ESTÉTICA</p>
+            <p class="text-xs text-zinc-300 mt-1 leading-relaxed">Refinamento de simetria, densidade muscular, definição avançada e mentalidade inabalável.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 4: PLANOS MENSAIS + CHAVE INTERATIVA DE 50% OFF (#planos) -->
+    <section id="planos" class="scroll-mt-20 py-20 bg-obsidian-900 border-b border-steel-800 relative">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center max-w-3xl mx-auto mb-12 space-y-4">
+          <span class="font-mono text-xs uppercase tracking-widest text-crimson-500">// Planos Mensais</span>
+          <h2 class="font-display text-5xl sm:text-6xl tracking-wide uppercase text-white">
+            ESCOLHA SEU NÍVEL DE <span class="text-crimson-600">ACOMPANHAMENTO</span>
+          </h2>
+          <p class="text-steel-400 text-sm sm:text-base">
+            Seja um dos primeiros alunos da Consultoria do Coelho e garanta <strong class="text-white">50% DE DESCONTO em todas as mensalidades a partir do 2º mês</strong> durante todo o acompanhamento!
+          </p>
+
+          <!-- Toggle Interativo: Valor 1º Mês (Entrada) vs A partir do 2º Mês (50% OFF Fundador) -->
+          <div class="inline-flex flex-col sm:flex-row items-stretch sm:items-center bg-obsidian-950 p-1.5 border border-steel-700 mt-4 w-full sm:w-auto max-w-md sm:max-w-none mx-auto gap-1.5 sm:gap-0" role="group" aria-label="Alternar visualização de preços entre 1º mês e a partir do 2º mês">
+            <button id="btn-mes1" type="button" onclick="setPricingMode('mes1')" class="min-h-[44px] px-4 py-2.5 text-xs font-mono uppercase tracking-wider transition bg-obsidian-800 text-zinc-300">
+              Valor 1º Mês (Entrada)
+            </button>
+            <button id="btn-mes2" type="button" onclick="setPricingMode('mes2')" class="min-h-[44px] px-4 py-2.5 text-xs font-mono uppercase tracking-wider transition bg-crimson-600 text-white font-bold shadow-[0_0_15px_rgba(220,38,38,0.4)]">
+              A partir do 2º Mês (50% OFF Fundador)
+            </button>
+          </div>
+        </div>
+
+        <!-- Grade dos 3 Planos -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+
+          <!-- PLANO 1: NORMAL -->
+          <div class="armor-card bg-obsidian-950 border border-steel-800 p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-4">
+                <h3 class="font-display text-3xl tracking-wider text-white">NORMAL</h3>
+                <span class="font-mono text-[11px] uppercase px-2.5 py-0.5 bg-obsidian-800 text-steel-400 border border-steel-700">Online Semanal</span>
+              </div>
+
+              <div class="my-6 pb-6 border-b border-steel-800">
+                <div class="flex items-baseline gap-2 flex-wrap">
+                  <span class="text-sm font-mono text-crimson-500">R$</span>
+                  <span id="price-normal" class="font-display text-6xl text-white tracking-tight">100</span>
+                  <span id="suffix-normal" class="text-xs font-mono text-steel-400">/mês a partir do 2º mês</span>
+                </div>
+                <p id="sub-normal" class="text-xs font-mono text-founder mt-1.5">
+                  1º mês: R$ 200 &rarr; Demais meses: R$ 100/mês (50% OFF)
+                </p>
+              </div>
+
+              <ul class="space-y-4 text-sm text-zinc-300 mb-8">
+                <li class="flex items-start gap-3">
+                  <span class="text-crimson-500 font-bold mt-0.5">&#10003;</span>
+                  <span><strong>Atualização de treino toda semana</strong> conforme sua evolução.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-crimson-500 font-bold mt-0.5">&#10003;</span>
+                  <span><strong>Feedback semanal</strong> e ajustes em treino, dieta e postura toda semana.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-crimson-500 font-bold mt-0.5">&#10003;</span>
+                  <span>Protocolo alimentar flexível (sem terrorismo alimentar).</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-crimson-500 font-bold mt-0.5">&#10003;</span>
+                  <span>Bioimpedância / análise física e periodização individualizada.</span>
+                </li>
+              </ul>
+            </div>
+
+            <button type="button" onclick="selectPlan('NORMAL (1º mês R$ 200 -> 2º mês R$ 100)')" class="w-full min-h-[52px] armor-btn bg-obsidian-800 hover:bg-crimson-600 text-white border border-steel-700 hover:border-crimson-500 font-display text-2xl tracking-wider py-3.5 transition">
+              ESCOLHER PLANO NORMAL
+            </button>
+          </div>
+
+          <!-- PLANO 2: PLUS (MAIS ESCOLHIDO) -->
+          <div class="armor-card bg-obsidian-950 eclipse-card-glow border-2 border-crimson-600 p-6 sm:p-8 flex flex-col justify-between relative shadow-[0_0_40px_rgba(220,38,38,0.18)] lg:-translate-y-3">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-4">
+                <h3 class="font-display text-4xl tracking-wider text-white">PLUS</h3>
+                <span class="font-mono text-[11px] font-bold uppercase px-3 py-1 bg-crimson-600 text-white">Mais Escolhido</span>
+              </div>
+
+              <div class="my-6 pb-6 border-b border-steel-800">
+                <div class="flex items-baseline gap-2 flex-wrap">
+                  <span class="text-sm font-mono text-crimson-500">R$</span>
+                  <span id="price-plus" class="font-display text-7xl text-crimson-500 tracking-tight">125</span>
+                  <span id="suffix-plus" class="text-xs font-mono text-steel-400">/mês a partir do 2º mês</span>
+                </div>
+                <p id="sub-plus" class="text-xs font-mono text-founder mt-1.5">
+                  1º mês: R$ 250 &rarr; Demais meses: R$ 125/mês (50% OFF)
+                </p>
+              </div>
+
+              <ul class="space-y-4 text-sm text-zinc-200 mb-8">
+                <li class="flex items-start gap-3">
+                  <span class="text-crimson-500 font-bold mt-0.5">&#10003;</span>
+                  <span><strong>Tudo do Plano Normal</strong> incluso na base.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-crimson-500 font-bold mt-0.5">&#10003;</span>
+                  <span><strong>Atualização de feedback diária:</strong> contato próximo todos os dias para não errar nada.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-crimson-500 font-bold mt-0.5">&#10003;</span>
+                  <span><strong>Ajuste de postura, treino e contagem diária</strong> de evolução e macronutrientes.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-crimson-500 font-bold mt-0.5">&#10003;</span>
+                  <span>Prioridade máxima na análise de vídeos de execução.</span>
+                </li>
+              </ul>
+            </div>
+
+            <button type="button" onclick="selectPlan('PLUS (1º mês R$ 250 -> 2º mês R$ 125)')" class="w-full min-h-[52px] armor-btn bg-crimson-600 hover:bg-crimson-500 text-white font-display text-2xl tracking-wider py-4 shadow-[0_0_25px_rgba(220,38,38,0.4)] transition">
+              GARANTIR VAGA NO PLUS
+            </button>
+          </div>
+
+          <!-- PLANO 3: ULTRA ALUNO -->
+          <div class="armor-card bg-obsidian-950 border border-steel-800 p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-4">
+                <h3 class="font-display text-3xl tracking-wider text-white">ULTRA ALUNO</h3>
+                <span class="font-mono text-[11px] uppercase px-2.5 py-0.5 bg-crimson-900/40 text-crimson-500 border border-crimson-700/50">Online + Presencial</span>
+              </div>
+
+              <div class="my-6 pb-6 border-b border-steel-800">
+                <div class="flex items-baseline gap-2 flex-wrap">
+                  <span class="text-sm font-mono text-crimson-500">R$</span>
+                  <span id="price-ultra" class="font-display text-6xl text-white tracking-tight">150</span>
+                  <span id="suffix-ultra" class="text-xs font-mono text-steel-400">/mês a partir do 2º mês*</span>
+                </div>
+                <p id="sub-ultra" class="text-xs font-mono text-founder mt-1.5">
+                  1º mês: R$ 300 &rarr; Demais meses: R$ 150/mês (Lote Fundador)
+                </p>
+              </div>
+
+              <ul class="space-y-4 text-sm text-zinc-300 mb-8">
+                <li class="flex items-start gap-3">
+                  <span class="text-crimson-500 font-bold mt-0.5">&#9733;</span>
+                  <span><strong>Fora benefícios anteriores</strong> (Normal + Feedback Diário Plus completos).</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-crimson-500 font-bold mt-0.5">&#9733;</span>
+                  <span><strong>Direito a 2 aulas presenciais de personal por semana</strong> (8 sessões presenciais/mês).</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-crimson-500 font-bold mt-0.5">&#9733;</span>
+                  <span>Bioimpedância presencial e correção biomecânica lado a lado no treino.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-crimson-500 font-bold mt-0.5">&#9733;</span>
+                  <span>Vagas estritamente limitadas pela agenda presencial.</span>
+                </li>
+              </ul>
+            </div>
+
+            <button type="button" onclick="selectPlan('ULTRA ALUNO (Presencial 2x/semana + Consultoria)')" class="w-full min-h-[52px] armor-btn bg-obsidian-800 hover:bg-crimson-600 text-white border border-steel-700 hover:border-crimson-500 font-display text-2xl tracking-wider py-3.5 transition">
+              CONSULTAR AGENDA ULTRA
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 5: SIMULADOR INTERATIVO DE PRÉ-ANAMNESE & FUNIL WHATSAPP (#simulador) -->
+    <section id="simulador" class="scroll-mt-20 py-20 bg-obsidian-950 bg-manga-hatch border-b border-steel-800 relative">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6">
+        <div class="armor-card bg-obsidian-900 border border-crimson-600/50 p-6 sm:p-10 shadow-[0_0_50px_rgba(0,0,0,0.8)]">
+          <div class="mb-8">
+            <span class="font-mono text-xs uppercase tracking-widest text-crimson-500">// Passo Final: Vamos Juntos?</span>
+            <h2 class="font-display text-4xl sm:text-5xl tracking-wide text-white mt-1">
+              MONTE SEU CHAMADO PARA O <span class="text-crimson-600">WHATSAPP DO COELHO</span>
+            </h2>
+            <p class="text-steel-400 text-sm mt-1">
+              Selecione seu objetivo e seu plano abaixo. O sistema prepara sua ficha inicial para agilizar seu atendimento e garantir seu desconto de primeiro aluno (50% OFF a partir do 2º mês).
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-6">
+            <div>
+              <label for="input-nome" class="block font-mono text-xs uppercase text-steel-400 mb-2">1. Seu Nome</label>
+              <input
+                id="input-nome"
+                name="nome"
+                type="text"
+                placeholder="Ex: Gabriel Silva"
+                oninput="updateWaPreview()"
+                class="w-full min-h-[46px] bg-obsidian-800 border border-steel-700 focus:border-crimson-500 text-white px-4 py-3 text-sm outline-none transition"
+              />
+            </div>
+
+            <div>
+              <label for="input-obj" class="block font-mono text-xs uppercase text-steel-400 mb-2">2. Objetivo Principal</label>
+              <select
+                id="input-obj"
+                name="objetivo"
+                onchange="updateWaPreview()"
+                class="w-full min-h-[46px] bg-obsidian-800 border border-steel-700 focus:border-crimson-500 text-white px-4 py-3 text-sm outline-none transition"
+              >
+                <option value="Hipertrofia e Ganho de Massa Muscular">Hipertrofia e Ganho de Massa</option>
+                <option value="Emagrecimento e Definição (Sem Terrorismo Alimentar)">Emagrecimento + Comer Docinho</option>
+                <option value="Recomposição Corporal e Postura">Recomposição Corporal e Postura</option>
+                <option value="Performance e Fisiculturismo">Estética &amp; Fisiculturismo</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="input-plano" class="block font-mono text-xs uppercase text-steel-400 mb-2">3. Plano Escolhido</label>
+              <select
+                id="input-plano"
+                name="plano"
+                onchange="updateWaPreview()"
+                class="w-full min-h-[46px] bg-obsidian-800 border border-steel-700 focus:border-crimson-500 text-white px-4 py-3 text-sm outline-none transition"
+              >
+                <option value="PLUS (1º mês R$ 250 -> 2º mês R$ 125)">Plano PLUS (R$ 250 &rarr; R$ 125/mês)</option>
+                <option value="NORMAL (1º mês R$ 200 -> 2º mês R$ 100)">Plano NORMAL (R$ 200 &rarr; R$ 100/mês)</option>
+                <option value="ULTRA ALUNO (Presencial 2x/semana + Consultoria)">Plano ULTRA ALUNO (R$ 300 - 2x Presencial)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Preview da Mensagem Automática -->
+          <div class="bg-obsidian-950 border border-steel-800 p-4 mb-6">
+            <span class="font-mono text-[10px] uppercase tracking-widest text-crimson-500 block mb-1">Prévia da mensagem que será enviada ao Coelho Dias:</span>
+            <p id="wa-preview" class="font-mono text-xs text-zinc-300 leading-relaxed break-words">
+              "Fala Coelho! Vi o site da Consultoria do Coelho e quero garantir minha vaga na promoção de Primeiros Alunos (50% OFF a partir do 2º mês). Meu foco é Hipertrofia e Ganho de Massa Muscular no Plano PLUS (1º mês R$ 250 -> 2º mês R$ 125). Vamos juntos?"
+            </p>
+          </div>
+
+          <a
+            id="wa-link"
+            href="https://wa.me/5511999999999?text=Fala%20Coelho!%20Vi%20o%20site%20da%20Consultoria%20do%20Coelho%20e%20quero%20garantir%20minha%20vaga%20na%20promo%C3%A7%C3%A3o%20de%20Primeiros%20Alunos%20(50%25%20OFF%20a%20partir%20do%202%C2%BA%20m%C3%AAs).%20Meu%20foco%20%C3%A9%20Hipertrofia%20e%20Ganho%20de%20Massa%20Muscular%20no%20Plano%20PLUS%20(1%C2%BA%20m%C3%AAs%20R%24%20250%20-%3E%202%C2%BA%20m%C3%AAs%20R%24%20125).%20Vamos%20juntos%3F"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center justify-center w-full min-h-[56px] armor-btn bg-crimson-600 hover:bg-crimson-500 text-white font-display text-2xl sm:text-3xl tracking-wider py-4 px-4 text-center shadow-[0_0_30px_rgba(220,38,38,0.45)] transition"
+          >
+            ENVIAR NO WHATSAPP E GARANTIR 50% OFF &rarr;
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 6: QUEBRA DE OBJEÇÕES (FAQ ACCORDION INTERATIVO) (#faq) -->
+    <section id="faq" class="scroll-mt-20 py-20 bg-obsidian-900 border-b border-steel-800 relative">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-12 space-y-3">
+          <span class="font-mono text-xs uppercase tracking-widest text-crimson-500">// Dúvidas Frequentes</span>
+          <h2 class="font-display text-4xl sm:text-5xl tracking-wide uppercase text-white">
+            PERGUNTAS <span class="text-crimson-600">FREQUENTES</span>
+          </h2>
+          <p class="text-steel-400 text-sm max-w-xl mx-auto">
+            Tudo o que você precisa saber sobre a metodologia, análise física, dieta flexível e funcionamento do Lote Fundador.
+          </p>
+        </div>
+
+        <div class="space-y-4">
+          <!-- FAQ Item 1 -->
+          <div class="armor-card bg-obsidian-800 border border-steel-800">
+            <h3>
+              <button type="button" onclick="toggleFaq(0)" id="faq-btn-0" aria-expanded="true" aria-controls="faq-panel-0" class="w-full min-h-[56px] px-6 py-4 text-left flex items-center justify-between gap-4 hover:bg-obsidian-700/60 transition">
+                <span class="font-display text-xl sm:text-2xl tracking-wide text-white">1. COMO FUNCIONA A BIOIMPEDÂNCIA E A ANÁLISE FÍSICA NO ONLINE E NO PRESENCIAL?</span>
+                <span id="faq-icon-0" class="font-mono text-crimson-500 text-xl font-bold shrink-0">&minus;</span>
+              </button>
+            </h3>
+            <div id="faq-panel-0" role="region" aria-labelledby="faq-btn-0" class="px-6 pb-5 text-sm text-steel-400 leading-relaxed border-t border-steel-800/80 pt-4">
+              Para alunos presenciais (Plano Ultra Aluno), realizamos a bioimpedância e a avaliação postural presencialmente. Para alunos da consultoria online (Planos Normal e Plus), você recebe um guia padronizado de fotos, circunferências e anamnese biomecânica para mapearmos sua composição corporal, assimetrias e desvios posturais com precisão técnica.
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="armor-card bg-obsidian-800 border border-steel-800">
+            <h3>
+              <button type="button" onclick="toggleFaq(1)" id="faq-btn-1" aria-expanded="false" aria-controls="faq-panel-1" class="w-full min-h-[56px] px-6 py-4 text-left flex items-center justify-between gap-4 hover:bg-obsidian-700/60 transition">
+                <span class="font-display text-xl sm:text-2xl tracking-wide text-white">2. É VERDADE QUE VOU PODER COMER DOCINHO TODO DIA E AINDA EMAGRECER?</span>
+                <span id="faq-icon-1" class="font-mono text-crimson-500 text-xl font-bold shrink-0">+</span>
+              </button>
+            </h3>
+            <div id="faq-panel-1" role="region" aria-labelledby="faq-btn-1" class="hidden px-6 pb-5 text-sm text-steel-400 leading-relaxed border-t border-steel-800/80 pt-4">
+              Sim! Trabalhamos com zero terrorismo alimentar. O emagrecimento e a definição muscular dependem do déficit calórico estruturado e da correta distribuição de macronutrientes ao longo do dia. Calculamos uma fração estratégica da sua meta diária para que você inclua seu doce preferido sem sabotar seus resultados e sem sofrer com compulsões.
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="armor-card bg-obsidian-800 border border-steel-800">
+            <h3>
+              <button type="button" onclick="toggleFaq(2)" id="faq-btn-2" aria-expanded="false" aria-controls="faq-panel-2" class="w-full min-h-[56px] px-6 py-4 text-left flex items-center justify-between gap-4 hover:bg-obsidian-700/60 transition">
+                <span class="font-display text-xl sm:text-2xl tracking-wide text-white">3. COMO FUNCIONA O DESCONTO DE 50% A PARTIR DO 2º MÊS (LOTE FUNDADOR)?</span>
+                <span id="faq-icon-2" class="font-mono text-crimson-500 text-xl font-bold shrink-0">+</span>
+              </button>
+            </h3>
+            <div id="faq-panel-2" role="region" aria-labelledby="faq-btn-2" class="hidden px-6 pb-5 text-sm text-steel-400 leading-relaxed border-t border-steel-800/80 pt-4">
+              Ao entrar agora no Lote Fundador de Primeiros Alunos, você investe o valor normal apenas no 1º mês (R$ 200 no Normal, R$ 250 no Plus ou R$ 300 no Ultra) e garante 50% DE DESCONTO fixo em todas as mensalidades a partir do 2º mês (caindo para R$ 100/mês, R$ 125/mês ou R$ 150/mês) durante todo o período em que mantiver seu acompanhamento ativo.
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div class="armor-card bg-obsidian-800 border border-steel-800">
+            <h3>
+              <button type="button" onclick="toggleFaq(3)" id="faq-btn-3" aria-expanded="false" aria-controls="faq-panel-3" class="w-full min-h-[56px] px-6 py-4 text-left flex items-center justify-between gap-4 hover:bg-obsidian-700/60 transition">
+                <span class="font-display text-xl sm:text-2xl tracking-wide text-white">4. COMO FUNCIONAM AS 2 AULAS PRESENCIAIS POR SEMANA DO PLANO ULTRA ALUNO?</span>
+                <span id="faq-icon-3" class="font-mono text-crimson-500 text-xl font-bold shrink-0">+</span>
+              </button>
+            </h3>
+            <div id="faq-panel-3" role="region" aria-labelledby="faq-btn-3" class="hidden px-6 pb-5 text-sm text-steel-400 leading-relaxed border-t border-steel-800/80 pt-4">
+              No Plano Ultra Aluno, além de todo o acompanhamento online diário (treino, dieta, contagem de macros e ajustes posturais), você tem direito a 2 sessões presenciais de Personal Trainer por semana com o Coelho Dias (totalizando 8 aulas presenciais por mês), alinhadas diretamente na agenda conforme disponibilidade de horários.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- RODAPÉ INSTITUCIONAL COMPLETO -->
+  <footer class="bg-obsidian-950 border-t border-steel-800 py-12 text-xs text-steel-400">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 border-b border-steel-800/80">
+        <!-- Coluna 1: Marca e CREF -->
+        <div class="space-y-3">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded bg-obsidian-800 border border-crimson-600/60 flex items-center justify-center">
+              <svg class="w-5 h-5 text-crimson-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                <path d="M12 2L15.5 9L21 4L19 16H5L3 4L8.5 9L12 2Z" stroke-linejoin="miter"/>
+                <path d="M12 9V22M8 19H16" stroke-linecap="square"/>
+              </svg>
+            </div>
+            <div>
+              <span class="font-display text-xl tracking-wider text-white block leading-none">CONSULTORIA DO <span class="text-crimson-600">COELHO</span></span>
+              <span class="font-mono text-[10px] tracking-widest uppercase text-steel-400 block">Coelho Dias &bull; Personal Trainer</span>
+            </div>
+          </div>
+          <p class="text-steel-400 text-xs leading-relaxed">
+            Treinamento individualizado, periodização fisiológica e estratégia alimentar sem terrorismo para resultados reais e definitivos.
+          </p>
+          <p class="font-mono text-[11px] text-zinc-300 bg-obsidian-900 border border-steel-800 px-3 py-1.5 inline-block">
+            CREF: Profissional de Educação Física Registrado &bull; Consultoria Online &amp; Presencial
+          </p>
+        </div>
+
+        <!-- Coluna 2: Links Rápidos -->
+        <div class="space-y-2 font-mono">
+          <p class="text-white uppercase tracking-widest text-xs font-bold mb-3">// Navegação</p>
+          <ul class="space-y-2">
+            <li><a href="#metodo" class="hover:text-crimson-500 transition inline-flex items-center min-h-[32px]">Os 5 Pilares da Consultoria</a></li>
+            <li><a href="#filosofia" class="hover:text-crimson-500 transition inline-flex items-center min-h-[32px]">A Mentalidade da Forja</a></li>
+            <li><a href="#planos" class="hover:text-crimson-500 transition inline-flex items-center min-h-[32px]">Planos Mensais (50% OFF)</a></li>
+            <li><a href="#simulador" class="hover:text-crimson-500 transition inline-flex items-center min-h-[32px]">Simulador de Protocolo</a></li>
+            <li><a href="#faq" class="hover:text-crimson-500 transition inline-flex items-center min-h-[32px]">Perguntas Frequentes</a></li>
+          </ul>
+        </div>
+
+        <!-- Coluna 3: Canais de Atendimento e Redes Sociais -->
+        <div class="space-y-3 font-mono">
+          <p class="text-white uppercase tracking-widest text-xs font-bold mb-3">// Contato &amp; Redes</p>
+          <p class="text-steel-400 text-xs">Atendimento Online para todo o Brasil e Presencial com vagas limitadas.</p>
+          <div class="flex flex-wrap gap-3 pt-1">
+            <a href="#simulador" class="px-3.5 py-2 min-h-[44px] inline-flex items-center bg-obsidian-800 border border-steel-700 hover:border-crimson-500 text-zinc-200 transition">
+              WhatsApp Oficial
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 min-h-[44px] inline-flex items-center bg-obsidian-800 border border-steel-700 hover:border-crimson-500 text-zinc-200 transition">
+              Instagram @coelhodias
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-[11px]">
+        <p>&copy; 2026 CONSULTORIA DO COELHO &bull; COELHO DIAS PERSONAL TRAINER. TODOS OS DIREITOS RESERVADOS.</p>
+        <p class="text-crimson-500 font-bold">SEU OBJETIVO + MEU PLANO = RESULTADOS REAIS</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const btn = document.getElementById('mobile-menu-btn');
+      const iconOpen = document.getElementById('menu-icon-open');
+      const iconClose = document.getElementById('menu-icon-close');
+      const isHidden = menu.classList.contains('hidden');
+
+      if (isHidden) {
+        menu.classList.remove('hidden');
+        btn.setAttribute('aria-expanded', 'true');
+        iconOpen.classList.add('hidden');
+        iconClose.classList.remove('hidden');
+      } else {
+        closeMobileMenu();
+      }
+    }
+
+    function closeMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const btn = document.getElementById('mobile-menu-btn');
+      const iconOpen = document.getElementById('menu-icon-open');
+      const iconClose = document.getElementById('menu-icon-close');
+
+      menu.classList.add('hidden');
+      btn.setAttribute('aria-expanded', 'false');
+      iconOpen.classList.remove('hidden');
+      iconClose.classList.add('hidden');
+    }
+
+    function setPricingMode(mode) {
+      const btnMes1 = document.getElementById('btn-mes1');
+      const btnMes2 = document.getElementById('btn-mes2');
+      const pNormal = document.getElementById('price-normal');
+      const pPlus = document.getElementById('price-plus');
+      const pUltra = document.getElementById('price-ultra');
+      const sufNormal = document.getElementById('suffix-normal');
+      const sufPlus = document.getElementById('suffix-plus');
+      const sufUltra = document.getElementById('suffix-ultra');
+
+      if (mode === 'mes1') {
+        btnMes1.className = 'min-h-[44px] px-4 py-2.5 text-xs font-mono uppercase tracking-wider transition bg-crimson-600 text-white font-bold shadow-[0_0_15px_rgba(220,38,38,0.4)]';
+        btnMes2.className = 'min-h-[44px] px-4 py-2.5 text-xs font-mono uppercase tracking-wider transition bg-obsidian-800 text-zinc-300';
+        pNormal.textContent = '200';
+        pPlus.textContent = '250';
+        pUltra.textContent = '300';
+        if (sufNormal) sufNormal.textContent = '/mês no 1º mês (entrada)';
+        if (sufPlus) sufPlus.textContent = '/mês no 1º mês (entrada)';
+        if (sufUltra) sufUltra.textContent = '/mês no 1º mês (entrada)';
+      } else {
+        btnMes2.className = 'min-h-[44px] px-4 py-2.5 text-xs font-mono uppercase tracking-wider transition bg-crimson-600 text-white font-bold shadow-[0_0_15px_rgba(220,38,38,0.4)]';
+        btnMes1.className = 'min-h-[44px] px-4 py-2.5 text-xs font-mono uppercase tracking-wider transition bg-obsidian-800 text-zinc-300';
+        pNormal.textContent = '100';
+        pPlus.textContent = '125';
+        pUltra.textContent = '150';
+        if (sufNormal) sufNormal.textContent = '/mês a partir do 2º mês';
+        if (sufPlus) sufPlus.textContent = '/mês a partir do 2º mês';
+        if (sufUltra) sufUltra.textContent = '/mês a partir do 2º mês*';
+      }
+    }
+
+    function selectPlan(planValue) {
+      const sel = document.getElementById('input-plano');
+      if (sel) {
+        sel.value = planValue;
+      }
+      updateWaPreview();
+      const target = document.getElementById('simulador');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    function updateWaPreview() {
+      const nomeInput = document.getElementById('input-nome');
+      const objInput = document.getElementById('input-obj');
+      const planoInput = document.getElementById('input-plano');
+      const previewEl = document.getElementById('wa-preview');
+      const linkEl = document.getElementById('wa-link');
+
+      const nome = nomeInput ? nomeInput.value.trim() : '';
+      const obj = objInput ? objInput.value : '';
+      const plano = planoInput ? planoInput.value : '';
+
+      const saudacao = nome ? `Fala Coelho! Aqui é ${nome}.` : `Fala Coelho!`;
+      const msg = `${saudacao} Vi o site da Consultoria do Coelho e quero garantir minha vaga na promoção de Primeiros Alunos (50% OFF a partir do 2º mês). Meu foco é ${obj} no Plano ${plano}. Vamos juntos?`;
+
+      if (previewEl) {
+        previewEl.textContent = `"${msg}"`;
+      }
+      if (linkEl) {
+        linkEl.href = `https://wa.me/5511999999999?text=${encodeURIComponent(msg)}`;
+      }
+    }
+
+    function toggleFaq(index) {
+      const panel = document.getElementById(`faq-panel-${index}`);
+      const btn = document.getElementById(`faq-btn-${index}`);
+      const icon = document.getElementById(`faq-icon-${index}`);
+      if (!panel || !btn || !icon) return;
+
+      const isHidden = panel.classList.contains('hidden');
+      if (isHidden) {
+        panel.classList.remove('hidden');
+        btn.setAttribute('aria-expanded', 'true');
+        icon.innerHTML = '&minus;';
+      } else {
+        panel.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+        icon.innerHTML = '+';
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      updateWaPreview();
+    });
+  </script>
+</body>
+</html>
+

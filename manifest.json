@@ -1,0 +1,17 @@
+{
+  "name": "Consultoria do Coelho — Coelho Dias Personal Trainer",
+  "short_name": "Consultoria do Coelho",
+  "description": "Disciplina é o que te leva mais longe. Acompanhamento de treino online e presencial, bioimpedância, treino e dieta periodizados sem terrorismo alimentar.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#060608",
+  "theme_color": "#DC2626",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

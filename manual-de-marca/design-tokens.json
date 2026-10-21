@@ -1,0 +1,110 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "name": "Design Tokens - Consultoria do Coelho (Dark Manga & Fisiculturismo)",
+  "color": {
+    "obsidian": {
+      "950": {
+        "value": "#060608",
+        "type": "color",
+        "description": "Preto Abissal - Fundo primário da página (atmosfera Dark Manga / Berserk)"
+      },
+      "900": {
+        "value": "#09090B",
+        "type": "color",
+        "description": "Preto Obsidiana - Fundo secundário de seções alternadas"
+      },
+      "800": {
+        "value": "#121216",
+        "type": "color",
+        "description": "Superfície de cartões de pilares, planos e inputs"
+      },
+      "700": {
+        "value": "#1C1C22",
+        "type": "color",
+        "description": "Superfície elevada e estados de hover"
+      }
+    },
+    "crimson": {
+      "500": {
+        "value": "#EF4444",
+        "type": "color",
+        "description": "Vermelho Vivo - Textos de destaque, setas, hovers e indicadores ativos"
+      },
+      "600": {
+        "value": "#DC2626",
+        "type": "color",
+        "description": "Vermelho Eclipse (Cor Primária de Marca) - CTAs, bordas de destaque (Plano Plus), brasão e selos"
+      },
+      "700": {
+        "value": "#B91C1C",
+        "type": "color",
+        "description": "Vermelho Sangue Escuro - Sublinhados dramáticos e sombras"
+      },
+      "900": {
+        "value": "#7F1D1D",
+        "type": "color",
+        "description": "Fundo translúcido de alertas e gradientes de escassez"
+      }
+    },
+    "steel": {
+      "400": {
+        "value": "#A1A1AA",
+        "type": "color",
+        "description": "Cinza Metálico Claro - Subtítulos, descrições técnicas e legendas"
+      },
+      "700": {
+        "value": "#3F3F46",
+        "type": "color",
+        "description": "Borda de Aço Forjado - Contornos de inputs e botões secundários"
+      },
+      "800": {
+        "value": "#27272A",
+        "type": "color",
+        "description": "Linhas divisórias estruturais e bordas de cards chanfrados"
+      }
+    },
+    "semantic": {
+      "white": {
+        "value": "#F4F4F5",
+        "type": "color",
+        "description": "Branco Marfim para títulos e leitura de alto contraste"
+      },
+      "founderDiscount": {
+        "value": "#34D399",
+        "type": "color",
+        "description": "Verde Esmeralda para destacar a economia de 50% OFF a partir do 2º mês"
+      }
+    }
+  },
+  "typography": {
+    "fontFamily": {
+      "display": {
+        "value": "'Bebas Neue', Impact, sans-serif",
+        "type": "fontFamily",
+        "description": "Tipografia condensada, alta e imponente para headlines, preços e botões chanfrados"
+      },
+      "sans": {
+        "value": "'Inter', system-ui, -apple-system, sans-serif",
+        "type": "fontFamily",
+        "description": "Tipografia limpa de alta legibilidade para benefícios dos planos e textos explicativos"
+      },
+      "mono": {
+        "value": "'JetBrains Mono', monospace",
+        "type": "fontFamily",
+        "description": "Tipografia técnica para badges, contadores, tags de seção e prévia de mensagem do WhatsApp"
+      }
+    }
+  },
+  "effects": {
+    "armorCardClip": {
+      "value": "polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 18px 100%, 0 calc(100% - 18px))",
+      "type": "other",
+      "description": "Recorte chanfrado em 45 graus nos cantos superior direito e inferior esquerdo (estilo placa de armadura)"
+    },
+    "armorButtonClip": {
+      "value": "polygon(10px 0, 100% 0, calc(100% - 10px) 100%, 0 100%)",
+      "type": "other",
+      "description": "Recorte angulado agressivo para botões de chamada para ação (CTA)"
+    }
+  }
+}

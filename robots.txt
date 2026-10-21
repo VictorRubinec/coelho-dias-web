@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://consultoriadocoelho.com.br/sitemap.xml
